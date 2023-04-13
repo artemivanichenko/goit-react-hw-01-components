@@ -26,13 +26,11 @@ export const StyledStatus = styled.span`
 export const StyledAvatar = styled.img`
   width: 48px;
   height: 48px;
-  /* margin: 10px auto; */
   padding: 0;
   margin: 10px;
 `;
 
 export const StyledName = styled.p`
-  /* margin: 10px auto; */
   padding: 0;
   margin: 10px;
   font-size: 22px;

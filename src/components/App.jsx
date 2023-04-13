@@ -1,4 +1,3 @@
-// import { data } from '../data/users';
 import dataUser from '../data/users.json';
 import dataStat from '../data/data.json';
 import dataFriends from '../data/friends.json';
