@@ -6,25 +6,23 @@ import {
   StyledName,
 } from './FriendList.styled';
 
-export const FriendListItem = ({ friends }) => {
+export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <>
-      {friends.map(({ avatar, name, isOnline, id }) => {
-        return (
-          <StyledItem key={id}>
-            <StyledStatus isRed isOnline={isOnline}></StyledStatus>
-            <StyledAvatar src={avatar} alt={name} />
-            <StyledName>{name}</StyledName>
-          </StyledItem>
-        );
-      })}
-    </>
+    <StyledItem>
+      <StyledStatus isRed isOnline={isOnline}></StyledStatus>
+      <StyledAvatar src={avatar} alt={name} />
+      <StyledName>{name}</StyledName>
+    </StyledItem>
   );
 };
 
 FriendListItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  avatar: PropTypes.string,
-  isOnline: PropTypes.string,
-  id: PropTypes.string,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string,
+      isOnline: PropTypes.bool,
+      id: PropTypes.string,
+    })
+  ),
 };

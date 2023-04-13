@@ -11,7 +11,6 @@ import {
   StyledLabel,
   StyledQuantity,
 } from './Profile.styled';
-import { PropTypes } from 'prop-types';
 
 export const Profile = ({
   username,

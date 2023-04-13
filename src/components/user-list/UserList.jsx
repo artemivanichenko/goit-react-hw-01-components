@@ -14,3 +14,13 @@ export const UserList = ({ users }) => {
     </ul>
   );
 };
+
+UserList.propTypes = {
+  users: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string,
+      id: PropTypes.string,
+    })
+  ),
+};

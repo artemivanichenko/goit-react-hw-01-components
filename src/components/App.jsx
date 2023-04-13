@@ -1,6 +1,7 @@
 // import { data } from '../data/users';
 import dataUser from '../data/users.json';
 import dataStat from '../data/data.json';
+import dataFriends from '../data/friends.json';
 import dataTransactions from '../data/transactions.json';
 
 import { Profile } from '../components/profile/Profile';
@@ -8,8 +9,6 @@ import { Statistics } from '../components/statistics/Statistics';
 import { FriendList } from '../components/friendList/FriendList';
 import { Transactions } from '../components/transaction/Transactions';
 
-// import { UserList } from "../components/user-list/UserList"
-// console.log(dataProfile);
 const {
   username,
   tag,
@@ -17,7 +16,7 @@ const {
   avatar,
   stats: { followers, views, likes },
 } = dataUser;
-// const { id, label, percentage } = dataStat;
+
 export const App = () => {
   return (
     <>
@@ -32,7 +31,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={dataStat} />
 
-      <FriendList />
+      <FriendList friends={dataFriends} />
       <Transactions items={dataTransactions} />
     </>
   );
