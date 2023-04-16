@@ -12,7 +12,7 @@ import {
 export const Statistics = ({ stats, title }) => {
   return (
     <StyledStatistics isRed>
-      <StyledTitle>{title ? title : 'Upload stats'}</StyledTitle>
+      <StyledTitle>{title && title}</StyledTitle>
       <StyledStatList>
         {stats.map(({ id, label, percentage }) => {
           return (
