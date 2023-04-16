@@ -20,9 +20,8 @@ FriendListItem.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      avatar: PropTypes.string,
-      isOnline: PropTypes.bool,
-      id: PropTypes.string,
+      avatar: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
     })
   ),
 };
